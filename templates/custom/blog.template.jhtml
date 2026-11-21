@@ -1,0 +1,5 @@
+<h1>{title}</h1>
+<b>Date: {date}</b> <br>
+<p>
+    {JuliaPagekit.body}
+</p>

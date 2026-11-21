@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{snippet} {JuliaPagekit.page-title}</title>
+    <meta name="description" content="{JuliaPagekit.description}">
+    {JuliaPagekit.style}
+</head>
+<body>
+    {JuliaPagekit.body}
+</body>
+</html>

@@ -1,0 +1,13 @@
+_JuliaPagekit-Title: This is the Page Title
+_JuliaPagekit-Description: This is The Page Discription
+_JuliaPagekit-Head: <link rel="stylesheet" href="CUSTOM STYLE FOR THIS PAGE LEVE BlANKT TO DISABLE">
+_JuliaPagekit-Page-Template: test.template.jhtml
+
+__CustomTemplate-test: hi
+__CustomTemplate-test2: hi
+__CustomTemplate-abcs: www.aocalux.com
+
+<p>Test</p>
+defefef
+a
+{snippet}

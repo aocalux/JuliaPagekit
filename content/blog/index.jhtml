@@ -1,0 +1,8 @@
+_JuliaPagekit-Title: Blog
+_JuliaPagekit-Description: This is The Page Discription
+_JuliaPagekit-Page-Template: blog.template.jhtml
+
+__CustomTemplate-title: This is the Title
+__CustomTemplate-date: 2026-11-21
+
+This is text!
