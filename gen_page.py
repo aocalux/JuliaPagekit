@@ -19,7 +19,7 @@ def make_page(page: str, global_template):
             elif line.startswith("_JuliaPagekit-Page-Template: "):
                 template_seption = line.replace("_JuliaPagekit-Page-Template: ", "").replace("\n", "")
                 if template_seption:
-                    print(template_seption)
+                    print("[JuliaPagekit] template in template for content/" + page + " with template " + template_seption)
                     template_seption = "custom/" + template_seption
                     template_seption_template = rw.get_template("templates/" + template_seption)
             else:
@@ -62,7 +62,6 @@ def template_in_template(content: list[str], page_assembelt, template_seption: s
         template_seption_template = template_seption_template.replace("\n", "")
     content_new = ""
     for constom_template_string in rw.get_template_conf(template_seption + ".jconf"):
-        print(constom_template_string)
         for line in content[3].splitlines():
             if line.startswith(f"__CustomTemplate-{constom_template_string.replace("{", "").replace("}", "")}: "):
                 template_seption_template = template_seption_template.replace(constom_template_string, line.replace(

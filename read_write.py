@@ -10,6 +10,7 @@ def get_raw_pages():
         for file in files:
             if file.endswith(".jhtml"):
                 pages.append(os.path.join(root.replace("content/", ""), file))
+                print("[JuliaPagekit] found page " + os.path.join(root, file))
 
     return pages
 
@@ -18,6 +19,7 @@ def get_template(path):
     content = ""
 
     with open(path, "r") as file:
+        print("[JuliaPagekit] found template " + path)
         for line in file:
             content += line
 
@@ -28,6 +30,7 @@ def get_template_conf(path):
     content = []
 
     with open("templates/" + path, "r") as file:
+        print("[JuliaPagekit] found template config " + "templates/" + path)
         for line in file:
             content.append(line.replace("\n", ""))
 
@@ -39,8 +42,10 @@ def make_folders(page: str):
         parents=True,
         exist_ok=True
     )
+    print("[JuliaPagekit] created folder docs/" + str(Path(page).parent))
 
 
 def write_page(page: str, page_assembelt):
     with open("docs/" + page.replace(".jhtml", ".html"), "w") as index:
         index.write(page_assembelt)
+        print("[JuliaPagekit] make page " + page)

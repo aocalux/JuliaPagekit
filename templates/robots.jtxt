@@ -1,4 +1,4 @@
-# This robots.txt file controls crawling of URLs under PAGE.
+# This robots.txt file controls crawling of URLs under example.com.
 
 # Block the Internet Archive / Wayback Machine crawlers
 User-agent: ia_archiver
@@ -10,3 +10,5 @@ Disallow: /
 User-agent: *
 Disallow: /_fileadmin/
 Disallow: /static/
+Disallow: /.well-known
+Disallow: /security.txt
