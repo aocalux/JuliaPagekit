@@ -43,7 +43,7 @@ JuliaPagekit is being developed primarily with the primary goal of building my o
 The name reflects both the personal motivation behind the project and its goal of allowing easy creation of fully custom websites.
 
 ## How to use
-!TODO: Add how to user
+!TODO: add how to use
 
 ## Contributing
 
