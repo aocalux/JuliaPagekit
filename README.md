@@ -36,6 +36,14 @@ JuliaPagekit is intentionally kept small and focused. The following are outside 
 - **Extensibility framework:** No plugin system, lifecycle hooks or custom processing pipelines.
 - **Hosting and deployment:** JuliaPagekit only generates static files. Hosting and deployment are handled separately (for example with GitHub Pages).
 
+## About the Name
+
+The name **JuliaPagekit** combines my name, *Julia*, with *Pagekit*, reflecting the project's purpose.
+
+JuliaPagekit is being developed primarily with the primary goal of building my own personal website as part of an upcoming rebuild. What started as a tool for a personal project is intended to become a standalone static site generator that others can use as well.
+
+The name reflects both the personal motivation behind the project and its goal of allowing easy creation of fully custom websites.
+
 ## Contributing
 
 Contributions, suggestions and bug reports are welcome. If you would like to contribute, please contact me by email.
