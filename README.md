@@ -1,14 +1,41 @@
 # JuliaPagekit
 
-A lightweight Python-based static site generator for building static websites with templates.
+A lightweight, Python-based static site generator that turns `.jhtml` files into HTML pages using custom templates.
 
 > [!WARNING]
-> **JuliaPagekit is currently in very early development and has not even reached the alpha stage.**
+> **JuliaPagekit is in very early development and has not yet reached the alpha stage.**
 >
-> This project is experimental, incomplete, and subject to significant changes. Features may be missing, documentation may be outdated, and things may break unexpectedly. It is not recommended for production use.
+> This project is experimental and incomplete. Features may be missing, documentation may be outdated, and things may change or break without notice. It is not recommended for production use.
+
+## Features
+
+- **Page files:** Write pages in `.jhtml` files using HTML and custom page metadata.
+- **Templates:** Use custom HTML templates with inheritance, variables and nested templates (one level of nesting).
+- **Configuration:** Configure the generator using `.jconf` files.
+- **Directory structure:** Automatically scan content directories and preserve their structure in the generated website.
+- **Static assets:** Copy files such as images, fonts, CSS and JavaScript into the output directory.
+- **HTML output:** Generate static HTML files, with basic HTML minification.
+- **Generated files:** Automatically create `robots.txt` and `security.txt`.
+
+## Planned Features
+
+- More comprehensive CSS and JavaScript handling.
+- Automatic navigation and breadcrumb generation.
+- Automatic `sitemap.xml` generation.
+- Optional blog functionality.
+- Real automatic generation of `robots.txt` and `security.txt`.
+- A system to bundle JuliaPagekit into one Python file for easy use and updating
+
+## Non-Goals
+
+JuliaPagekit is intentionally kept small and focused. The following are outside its scope:
+
+- **Additional content formats:** No Markdown, MDX, reStructuredText or other input formats. Pages are written in `.jhtml`.
+- **Content management:** No CMS, visual editor, user management or publishing workflow.
+- **Dynamic functionality:** No server-side execution, database integration, authentication or API backend.
+- **Extensibility framework:** No plugin system, lifecycle hooks or custom processing pipelines.
+- **Hosting and deployment:** JuliaPagekit only generates static files. Hosting and deployment are handled separately (for example with GitHub Pages).
 
 ## Contributing
 
-Contributions, ideas, suggestions, and bug reports are welcome!
-
-If you want to contribute contacted me by email.
+Contributions, suggestions and bug reports are welcome. If you would like to contribute, please contact me by email.
