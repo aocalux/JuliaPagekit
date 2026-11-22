@@ -3,6 +3,7 @@ from pathlib import Path
 
 import read_write as rw
 import gen_page as gen
+import setup as setup
 
 pagekit_credit = "\n\n <!-- This Page is using JuliaPagekit by aocalux - https://github.com/aocalux/JuliaPagekit -->"
 compat = False
@@ -32,6 +33,7 @@ def txt_files():
 
 
 def main():
+    setup.init()
     print("[JuliaPagekit] JuliaPagekit by aocalux - https://github.com/aocalux/JuliaPagekit")
     print("[JuliaPagekit] Warning: JuliaPagekit is currently in experimental stages!")
 
