@@ -1,4 +1,6 @@
 import os as os
+from pathlib import Path
+
 
 def get_raw_pages():
     folder_path = "content/"
@@ -31,3 +33,14 @@ def get_template_conf(path):
 
     return content
 
+
+def make_folders(page: str):
+    Path("docs", Path(page).parent).mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+
+def write_page(page: str, page_assembelt):
+    with open("docs/" + page.replace(".jhtml", ".html"), "w") as index:
+        index.write(page_assembelt)
