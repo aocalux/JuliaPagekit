@@ -12,3 +12,11 @@ __CustomTemplate-abcs: www.aocalux.com
 defefef
 a
 {snippet}
+<br>
+{JuliaPagekit.email={email}} <br>
+{JuliaPagekit.email=info@example.com} <br>
+{JuliaPagekit.email=info@beispiel.de} <br>
+{JuliaPagekit.email=info2@example.com} <br>
+<b>Das is {JuliaPagekit.ptext=sehr sehr geheimer Text} der ohne JS nicht vollständig ist</b> <br> <br>
+
+Magic: {&ZeroWidthSpace;JuliaPagekit.email=info2@example.com&ZeroWidthSpace;} => {JuliaPagekit.email=info2@example.com}<br>

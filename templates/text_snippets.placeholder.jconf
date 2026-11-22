@@ -1,2 +1,3 @@
 {domain} = example.com
+{email} = julia@example.com
 {snippet} = <b>Replace With Text</b>

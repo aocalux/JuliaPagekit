@@ -3,9 +3,9 @@
 A lightweight, Python-based static site generator that turns `.jhtml` files into HTML pages using custom templates.
 
 > [!WARNING]
-> **JuliaPagekit is in very early development and has not yet reached the alpha stage.**
+> **JuliaPagekit is in very early development.**
 >
-> This project is experimental and incomplete. Features may be missing, documentation may be outdated, and things may change or break without notice. It is not recommended for production use.
+> This project is in alpha experimental and incomplete. Features may be missing, documentation may be outdated, and things may change or break without notice. Cation is advised.
 
 ## Features
 
@@ -16,15 +16,13 @@ A lightweight, Python-based static site generator that turns `.jhtml` files into
 - **Static assets:** Copy files such as images, fonts, CSS and JavaScript into the output directory.
 - **HTML output:** Generate static HTML files, with basic HTML minification.
 - **Generated files:** Automatically create `robots.txt` and `security.txt`.
+- **Email and text protection:** hide emails or select text blocks until javascript is executed in the browser (Important: text and email are not encrypted just base64 encoded in the source code and not displayed, this is only ment to complicate automated scraping)
 
 ## Planned Features
 
-- More comprehensive CSS and JavaScript handling.
 - Automatic navigation and breadcrumb generation.
-- Automatic `sitemap.xml` generation.
 - Optional blog functionality.
-- Real automatic generation of `robots.txt` and `security.txt`.
-- A system to bundle JuliaPagekit into one Python file for easy use and updating
+- Real automatic generation of `security.txt`.
 
 ## Non-Goals
 
@@ -43,6 +41,9 @@ The name **JuliaPagekit** combines my name, *Julia*, with *Pagekit*, reflecting 
 JuliaPagekit is being developed primarily with the primary goal of building my own personal website as part of an upcoming rebuild. What started as a tool for a personal project is intended to become a standalone static site generator that others can use as well.
 
 The name reflects both the personal motivation behind the project and its goal of allowing easy creation of fully custom websites.
+
+## How to use
+!TODO: Add how to user
 
 ## Contributing
 

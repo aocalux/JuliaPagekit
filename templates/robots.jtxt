@@ -12,3 +12,4 @@ Disallow: /_fileadmin/
 Disallow: /static/
 Disallow: /.well-known
 Disallow: /security.txt
+{JuliaPagekit.auto-disallow}

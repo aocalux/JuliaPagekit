@@ -51,7 +51,8 @@ User-agent: *
 Disallow: /_fileadmin/
 Disallow: /static/
 Disallow: /.well-known
-Disallow: /security.txt"""
+Disallow: /security.txt
+{JuliaPagekit.auto-disallow}"""
 
 sec_template = """Contact: mailto:admin@example.com
 Expires: 2026-12-31T23:00:00.000Z

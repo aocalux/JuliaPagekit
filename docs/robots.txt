@@ -12,3 +12,7 @@ Disallow: /_fileadmin/
 Disallow: /static/
 Disallow: /.well-known
 Disallow: /security.txt
+Disallow: _test/
+Disallow: test/_test9/
+Disallow: blog/test7/test8/_excluded/
+Disallow: testx/_test.jhtml
