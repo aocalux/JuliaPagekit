@@ -15,4 +15,6 @@ Disallow: /security.txt
 Disallow: _test/
 Disallow: test/_test9/
 Disallow: blog/test7/test8/_excluded/
-Disallow: testx/_test.jhtml
+Disallow: testx/_test.html
+Disallow: test42/_i.html
+Disallow: test69/_testex/

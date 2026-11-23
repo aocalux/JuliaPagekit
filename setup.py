@@ -105,6 +105,10 @@ def make_project(project_name):
         parents=True,
         exist_ok=True
     )
+    Path(root, "content/_prerendered/").mkdir(
+        parents=True,
+        exist_ok=True
+    )
 
     with open(Path(root, "content/index.jhtml"), "w") as index:
         index.write(index_jhtml)

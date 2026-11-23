@@ -6,6 +6,7 @@ import gen_page as gen
 import setup as setup
 import process_emails as emails
 import process_sensitivtext as ptext
+from maketxt import make_robotstxt
 
 pagekit_credit = "\n\n <!-- This Page is using JuliaPagekit by aocalux - https://github.com/aocalux/JuliaPagekit -->"
 compat = False
@@ -20,10 +21,13 @@ def remove_old_build():
 def copy_statics():
     Path("content/static").mkdir(exist_ok=True)
     Path("content/_fileadmin").mkdir(exist_ok=True)
+    Path("content/_prerendered").mkdir(exist_ok=True)
     shutil.copytree("content/static", "docs/static")
     print("[JuliaPagekit] copied static content from content/static to docs/static")
     shutil.copytree("content/_fileadmin", "docs/_fileadmin")
     print("[JuliaPagekit] copied static content from content/_fileadmin to docs/_fileadmin")
+    shutil.copytree("content/_prerendered/", "docs/", dirs_exist_ok=True)
+    print("[JuliaPagekit] copied pre rendered content from content/_prerendered to docs/")
 
 
 def txt_files(raw_pages):
@@ -31,32 +35,6 @@ def txt_files(raw_pages):
 
     shutil.copy("templates/security.jtxt", "docs/security.txt")
     print("[JuliaPagekit] created security.txt")
-
-
-def make_robotstxt(raw_pages):
-    disallow_list = []
-    for page in raw_pages:
-        for folder in page.split("/"):
-            if folder.startswith("_"):
-                if folder.endswith(".jhtml"):
-                    disallow_list.append(page)
-                else:
-                    disallow_list.append(page.split(folder)[0] + folder + "/")
-
-    print(f"[JuliaPagekit] detected {disallow_list} to be added to robots.txt")
-    with open("templates/robots.jtxt", "r") as robotsjtxt:
-        content = ""
-        for line in robotsjtxt:
-            content = content + line
-
-        disallow_file = ""
-        for disallow in disallow_list:
-            disallow_file += "Disallow: " + disallow + "\n"
-        content = content.replace("{JuliaPagekit.auto-disallow}", disallow_file)
-
-        with open("docs/robots.txt", "w") as robots:
-            robots.write(content)
-            print("[JuliaPagekit] created robots.txt")
 
 
 def main():
