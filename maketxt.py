@@ -38,7 +38,8 @@ def disallow_prerendered(disallow_list: list[Any]):
     for prepage in prepages:
         for folder in prepage.split("/"):
             if folder.startswith("_"):
-                if folder.endswith(".html") or folder.endswith(".txt") or folder.endswith(".md") or folder.endswith(".php"):
+                if folder.endswith(".html") or folder.endswith(".txt") or folder.endswith(".md") or folder.endswith(
+                        ".php") or folder.endswith(".htm"):
                     disallow_list.append(prepage)
                 else:
                     disallow_list.append(prepage.split(folder)[0] + folder + "/")
