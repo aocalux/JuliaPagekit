@@ -46,6 +46,7 @@ def make_page(page: str, global_template):
         replacement[1] = ""
         replacement_string = ""
         for string in replacement: replacement_string += " " + string
+        replacement_string = replacement_string.strip()
 
         page_assembelt = page_assembelt.replace(replacement_key, replacement_string)
 
