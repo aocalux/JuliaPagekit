@@ -17,4 +17,9 @@ Disallow: test/_test9/
 Disallow: blog/test7/test8/_excluded/
 Disallow: testx/_test.html
 Disallow: test42/_i.html
+Disallow: _test123/
+Disallow: _test123/_test.md
+Disallow: _test123/
+Disallow: _test123/_tessssst.txt
+Disallow: _test123/
 Disallow: test69/_testex/

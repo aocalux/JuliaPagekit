@@ -33,13 +33,12 @@ def disallow_prerendered(disallow_list: list[Any]):
     prepages = []
     for root, _, files in os.walk("content/_prerendered/"):
         for file in files:
-            if file.endswith(".html"):
-                prepages.append(os.path.join(root.replace("content/_prerendered/", ""), file))
+            prepages.append(os.path.join(root.replace("content/_prerendered/", ""), file))
 
     for prepage in prepages:
         for folder in prepage.split("/"):
             if folder.startswith("_"):
-                if folder.endswith(".html"):
+                if folder.endswith(".html") or folder.endswith(".txt") or folder.endswith(".md"):
                     disallow_list.append(prepage)
                 else:
                     disallow_list.append(prepage.split(folder)[0] + folder + "/")
