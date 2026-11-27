@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{JuliaPagekit.lang}">
 <head>
     <meta charset="UTF-8">
     <title>{snippet} {JuliaPagekit.page-title}</title>

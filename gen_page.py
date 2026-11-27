@@ -5,7 +5,7 @@ from main import compat, pagekit_credit
 
 
 def make_page(page: str, global_template):
-    content = ["", "", "", "", "", ""]
+    content = ["", "", "", "", "", "", "en"]
     template_seption = ""
     template_seption_template = ""
     with (open("content/" + page, "r") as file):
@@ -26,6 +26,8 @@ def make_page(page: str, global_template):
                 content[4] = line.replace("_JuliaPagekit-PageID: ", "").replace("\n", "")
             elif line.startswith("_JuliaPagekit-modified: "):
                 content[5] = line.replace("_JuliaPagekit-modified: ", "").replace("\n", "")
+            elif line.startswith("_JuliaPagekit-lang: "):
+                content[6] = line.replace("_JuliaPagekit-lang: ", "").replace("\n", "")
             else:
                 content[3] += line
 
@@ -34,7 +36,7 @@ def make_page(page: str, global_template):
     page_assembelt = global_template.replace("{JuliaPagekit.page-title}", content[0]).replace(
         "{JuliaPagekit.description}",
         content[1]).replace(
-        "{JuliaPagekit.style}", content[2]).replace("{JuliaPagekit.pageid}", content[4]).replace("{JuliaPagekit.modified}", content[5])
+        "{JuliaPagekit.style}", content[2]).replace("{JuliaPagekit.pageid}", content[4]).replace("{JuliaPagekit.modified}", content[5]).replace("{JuliaPagekit.lang}", content[6])
 
     if template_seption_template:
         page_assembelt = template_in_template(content, page_assembelt, template_seption, template_seption_template)
