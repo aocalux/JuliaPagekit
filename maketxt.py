@@ -40,9 +40,9 @@ def disallow_prerendered(disallow_list: list[Any]):
             if folder.startswith("_"):
                 if folder.endswith(".html") or folder.endswith(".txt") or folder.endswith(".md") or folder.endswith(
                         ".php") or folder.endswith(".htm"):
-                    disallow_list.append(prepage)
+                    disallow_list.append("/" + prepage)
                 else:
-                    disallow_list.append(prepage.split(folder)[0] + folder + "/")
+                    disallow_list.append("/" + prepage.split(folder)[0] + folder + "/")
 
 
 def disallow_renderd(disallow_list: list[Any], raw_pages):
@@ -50,6 +50,6 @@ def disallow_renderd(disallow_list: list[Any], raw_pages):
         for folder in page.split("/"):
             if folder.startswith("_"):
                 if folder.endswith(".jhtml"):
-                    disallow_list.append(page)
+                    disallow_list.append("/" + page)
                 else:
-                    disallow_list.append(page.split(folder)[0] + folder + "/")
+                    disallow_list.append("/" + page.split(folder)[0] + folder + "/")
